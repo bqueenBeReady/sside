@@ -97,3 +97,10 @@ ENV/
 /.idea/bqueen.iml
 /.idea/misc.xml
 /.idea/modules.xml
+/.idea/*
+misc.xml
+modules.xml
+vcs.xml
+workspace.xml
+inspectionProfiles
+bqueen.iml
