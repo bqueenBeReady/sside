@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from pages.sendNotifications import notifiyController
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^hello/$', notifiyController.MyView.as_view()),
 ]

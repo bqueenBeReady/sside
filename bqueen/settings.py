@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fcm_django'
 ]
 
 MIDDLEWARE = [
@@ -118,3 +118,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+FCM_DJANGO_SETTINGS = {
+        "FCM_SERVER_KEY": "AAAAJ1__YyQ:APA91bFzSXOSN-rqH56BoHgVAw7G2hYlR_hrCTXuIEWoUkByMQcQpcZJzl3DwAK19A5QuLU7jbIDxo4d0ypqzQ_1eiEOZETbv9e-QIDdbIvvxpdEdsj121Z9erfUtAbMvJlWFd8VSFag",
+         # true if you want to have only one active device per registered user at a time
+         # default: False
+        "ONE_DEVICE_PER_USER": True,
+         # devices to which notifications cannot be sent,
+         # are deleted upon receiving error response from FCM
+         # default: False
+        "DELETE_INACTIVE_DEVICES": True,
+}
